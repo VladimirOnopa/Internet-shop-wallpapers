@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Shop</title>
+</head>
+<body>
+
+<!-- Menu -->
+
+<aside id="mob_device_side_menu" >
+    <div class="close_cross"  onclick="burgerMenuButtonClose()"></div>
+    <ul>
+        <li><a href="#">Личный кабинет</a></li>
+        <li><a href="#">Обои</a></li>
+        <li><a href="#">Корзина</a></li>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Наш адрес</a></li>
+        <li><a href="#">Поиск</a></li>
+        <li><a href="#">Калькулятор</a></li>
+    </ul>
+</aside>
+
+
+<!-- Mobile filter side panel -->
+
+
+<aside id="mob_device_side_menu_filter" >
+    <div class="close_cross"  aria-hidden="true" onclick=" filterMenuButtonOpenMenuButtonClose()"></div>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <a>
+                        Бренд
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div id="brand_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters"  data-brand="Versailles">Versailles</a></li>
+                        <li><a href="#" class="filters" data-brand="Status">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <a class="collapsed" >
+                        Цвет
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div id="color_f" class="panel-body">
+                    <ul>
+                        <div id="color_s_container">
+                            <div class="color_s_box filters" id="c_white" data-color="White"><span>Белые</span></div>
+                            <div class="color_s_box filters" id="c_l_brown" data-color="LightBrown"><span>Светло-коричневые</span></div>
+                            <div class="color_s_box filters" id="c_yellow" data-color="Yellow"><span>Желтые</span></div>
+                            <div class="color_s_box filters" id="c_gray" data-color="Gray"><span>Серые</span></div>
+                            <div class="color_s_box filters" id="c_aqua" data-color="Aqua"><span>Светло-бирюзовые</span></div>
+                            <div class="color_s_box filters" id="c_pink" data-color="Pink"><span>Розовые</span></div>
+                            <div class="color_s_box filters" id="c_green" data-color="Green"><span>Зеленые</span></div>
+                            <div class="color_s_box filters" id="c_red" data-color="Red"><span>Красные</span></div>
+                            <div class="color_s_box filters" id="c_blue" data-color="Blue"><span>Синие</span></div>
+                            <div class="color_s_box filters" id="c_purple" data-color="DarkPurple"><span>Темно-фиолетовые</span></div>
+                            <div class="color_s_box filters" id="c_brown" data-color="Brown"><span>Коричневые</span></div>
+                            <div class="color_s_box filters" id="c_black" data-color="Black"><span>Черные</span></div>
+                        </div>
+                        <li><a href="#">Под покраску</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <a class="collapsed">
+                        Назначение
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div id="assignment_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-assignment="LivingRoom">Гостиная</a></li>
+                        <li><a href="#" class="filters" data-assignment="Children's">Детская</a></li>
+                        <li><a href="#" class="filters" data-assignment="Kitchen">Кухня </a></li>
+                        <li><a href="#" class="filters" data-assignment="Lobby">Прихожая</a></li>
+                        <li><a href="#" class="filters" data-assignment="Bedroom">Спальня</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <a class="collapsed" >
+                        Формат
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div id="format_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-format="0,53x10,05">0,53 × 10,05 м</a></li>
+                        <li><a href="#" class="filters"  data-format="1,06x10,0">1,06 × 10,05 м</a></li>
+                        <li><a href="#" class="filters"  data-format="1,06x25,00">1,06 × 25,00 м</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFive">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <a class="collapsed">
+                        Основа
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div id="basis_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-basis="Paper">Бумага</a></li>
+                        <li><a href="#" class="filters" data-basis="Flizelin">Флизелин</a></li>
+                        <li><a href="#" class="filters" data-basis="Vinyl">Винил</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSix">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <a class="collapsed">
+                        Способ производства
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                <div id="mode_production_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-modeproduction="FoamedVinyl">Вспененный винил</a></li>
+                        <li><a href="#" class="filters" data-modeproduction="HotStamping">Горячее тиснение</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSeven">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <a class="collapsed">
+                        Раппорт стыковки
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                <div id="docking_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-docking="0">0</a></li>
+                        <li><a href="#" class="filters" data-mdocking="16">16</a></li>
+                        <li><a href="#" class="filters" data-docking="32">32</a></li>
+                        <li><a href="#" class="filters" data-docking="64">64</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingEight">
+                <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <a class="collapsed">
+                        Элемент рисунка
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                <div id="drawing_element_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-drawingelement="AbstractionAndGeometry">Абстракция и геометрия</a></li>
+                        <li><a href="#" class="filters" data-drawingelement="OrnamentAndClassics">Орнамент и классика</a></li>
+                        <li><a href="#" class="filters" data-drawingelement="PlotPicture">Сюжетный рисунок</a></li>
+                        <li><a href="#" class="filters" data-drawingelement="Floristics">Флористика</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingNine">
+                <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    <a class="collapsed" role="button">
+                        Размер рисунка
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                <div id="drawing_size_f" class="panel-body">
+                    <ul>
+                        <li><a href="#" class="filters" data-size="Big">Большой</a></li>
+                        <li><a href="#" class="filters" data-size="Small">Маленький</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+<!-- Top mobile panel -->
+
+
+<div id="mobile_top_panel">
+    <span class="glyphicon glyphicon-menu-hamburger" id="burger_menu" aria-hidden="true" onclick="burgerMenuButtonOpen()"></span>
+    <span class="glyphicon glyphicon-filter" id="filter_icon_mob_device" aria-hidden="true" onclick="filterMenuButtonOpen ()"></span>
+</div>
+
+
+<!-- Desktop side/top menu -->
+
+
+<aside id="menu">
+    <a href="#">
+        <div class="icon_menu" >
+            <div class="logo"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu ">
+            <div class="person"></div>
+        </div>
+    </a>
+    <a href="#" class="active_bnt">
+        <div class="icon_menu">
+            <div class="wallpaper"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu">
+            <div class="bucket"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu">
+            <div class="document"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu" >
+            <div class="location"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu">
+            <div class="search"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu">
+            <div class="calculator"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu icon_bottom">
+            <div class="person_c"></div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="icon_menu icon_bottom">
+            <div class="globe"></div>
+        </div>
+    </a>
+</aside>
+
+<aside>
+    <div id="filter_block">
+        <div id="brand_f" >
+            <ul>
+                <li><h5>Бренд</h5></li>
+                <li><a href="#" class="filters"  data-brand="Versailles">Versailles</a></li>
+                <li><a href="#" class="filters" data-brand="Status">Status</a></li>
+            </ul>
+        </div>
+        <div id="color_f">
+            <ul>
+                <li><h5>Цвет</h5></li>
+                <div id="color_s_container">
+                    <div class="color_s_box filters" id="c_white" data-color="White"><span>Белые</span></div>
+                    <div class="color_s_box filters" id="c_l_brown" data-color="LightBrown"><span>Светло-коричневые</span></div>
+                    <div class="color_s_box filters" id="c_yellow" data-color="Yellow"><span>Желтые</span></div>
+                    <div class="color_s_box filters" id="c_gray" data-color="Gray"><span>Серые</span></div>
+                    <div class="color_s_box filters" id="c_aqua" data-color="Aqua"><span>Светло-бирюзовые</span></div>
+                    <div class="color_s_box filters" id="c_pink" data-color="Pink"><span>Розовые</span></div>
+                    <div class="color_s_box filters" id="c_green" data-color="Green"><span>Зеленые</span></div>
+                    <div class="color_s_box filters" id="c_red" data-color="Red"><span>Красные</span></div>
+                    <div class="color_s_box filters" id="c_blue" data-color="Blue"><span>Синие</span></div>
+                    <div class="color_s_box filters" id="c_purple" data-color="DarkPurple"><span>Темно-фиолетовые</span></div>
+                    <div class="color_s_box filters" id="c_brown" data-color="Brown"><span>Коричневые</span></div>
+                    <div class="color_s_box filters" id="c_black" data-color="Black"><span>Черные</span></div>
+                </div>
+                <li><a href="#" class="filters" data-color="UnderPaint">Под покраску</a></li>
+            </ul>
+        </div>
+        <div id="assignment_f">
+            <ul>
+                <li><h5>Назначение</h5></li>
+                <li><a href="#" class="filters" data-assignment="LivingRoom">Гостиная</a></li>
+                <li><a href="#" class="filters" data-assignment="Children's">Детская</a></li>
+                <li><a href="#" class="filters" data-assignment="Kitchen">Кухня </a></li>
+                <li><a href="#" class="filters" data-assignment="Lobby">Прихожая</a></li>
+                <li><a href="#" class="filters" data-assignment="Bedroom">Спальня</a></li>
+            </ul>
+        </div>
+        <div id="format_f">
+            <ul>
+                <li><h5>Формат</h5></li>
+                <li><a href="#" class="filters" data-format="0,53x10,05">0,53 × 10,05 м</a></li>
+                <li><a href="#" class="filters"  data-format="1,06x10,0">1,06 × 10,05 м</a></li>
+                <li><a href="#" class="filters"  data-format="1,06x25,00">1,06 × 25,00 м</a></li>
+            </ul>
+        </div>
+        <div id="basis_f">
+            <ul>
+                <li><h5>Основа</h5></li>
+                <li><a href="#" class="filters" data-basis="Paper">Бумага</a></li>
+                <li><a href="#" class="filters" data-basis="Flizelin">Флизелин</a></li>
+                <li><a href="#" class="filters" data-basis="Vinyl">Винил</a></li>
+            </ul>
+        </div>
+        <div id="mode_production_f">
+            <ul>
+                <li><h5>Способ<br/>производства</h5></li>
+                <li><a href="#" class="filters" data-modeproduction="FoamedVinyl">Вспененный винил</a></li>
+                <li><a href="#" class="filters" data-modeproduction="HotStamping">Горячее тиснение</a></li>
+            </ul>
+        </div>
+        <div id="docking_f">
+            <ul>
+                <li><h5>Раппорт Стыковки</h5></li>
+                <li><a href="#" class="filters" data-docking="0">0</a></li>
+                <li><a href="#" class="filters" data-mdocking="16">16</a></li>
+                <li><a href="#" class="filters" data-docking="32">32</a></li>
+                <li><a href="#" class="filters" data-docking="64">64</a></li>
+            </ul>
+        </div>
+        <div id="drawing_element_f">
+            <ul>
+                <li><h5>Элемент рисунка</h5></li>
+                <li><a href="#" class="filters" data-drawingelement="AbstractionAndGeometry">Абстракция и геометрия</a></li>
+                <li><a href="#" class="filters" data-drawingelement="OrnamentAndClassics">Орнамент и классика</a></li>
+                <li><a href="#" class="filters" data-drawingelement="PlotPicture">Сюжетный рисунок</a></li>
+                <li><a href="#" class="filters" data-drawingelement="Floristics">Флористика</a></li>
+            </ul>
+        </div>
+        <div id="drawing_size_f">
+            <ul>
+                <li><h5>Размер рисунка</h5></li>
+                <li><a href="#" class="filters" data-size="Big">Большой</a></li>
+                <li><a href="#" class="filters" data-size="Small">Маленький</a></li>
+            </ul>
+        </div>
+    </div>
+</aside>
+
+
+
+<div id="layer_not_active"></div>
+<div id="page">
+    <main>
+        <div id="top_main_block">
+            <div id="favorite_block">
+                <h1>Каталог обоев</h1>
+                <div id="likes_icon">
+                    <p>10</p>
+                </div>
+                <div id="favorite_icon">
+                    <p>0</p>
+                </div>
+            </div>
+            <div id="main_filter_block">
+                <div id="result_filter">
+                    <h5>Результат фильтра</h5>
+                    <ul></ul>
+                </div>
+                <div id="form_search_block">
+                    <form action="">
+                        <div id="search_icn_form"></div>
+                        <input id="search_inp" type="search" placeholder="Поиск по артикулу" maxlength="15"/>
+                    </form>
+                </div>
+                <div id="category_search_block">
+                    <a href="#">Популярные</a>
+                    <a href="#">Новые</a>
+                    <a href="#">Артикул</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Wallpaper_container -->
+
+
+        <div id="wp_product_container">
+            <div class="wp_box" id="01">
+                <div class="wp_item" id="wp_1">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Versailles   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Флизелиновая</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="02">
+                <div class="wp_item" id="wp_2">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Status   </p>
+                            <h5>Формат</h5>
+                            <p>1,06 м × 25,00 м</p>
+                            <h5>Основа</h5>
+                            <p>Флизелиновая</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="03">
+                <div class="wp_item" id="wp_3">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Status   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Винил</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="04">
+                <div class="wp_item" id="wp_4">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Versailles   </p>
+                            <h5>Формат</h5>
+                            <p>1,06 м × 25,00 м</p>
+                            <h5>Основа</h5>
+                            <p>Бумага</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <a class="advt_1"  href="#">
+                <div class="advertising" ></div>
+            </a>
+            <div class="wp_box" id="05">
+                <div class="wp_item" id="wp_5">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Status   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Флизелиновая</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="06">
+                <div class="wp_item" id="wp_6">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Versailles   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Винил</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="07">
+                <div class="wp_item" id="wp_7">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Versailles   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Флизелиновая</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="08">
+                <div class="wp_item" id="wp_8">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Versailles   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Бумага</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="09">
+                <div class="wp_item" id="wp_9">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Versailles   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Бумага</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+            <div class="wp_box" id="10">
+                <div class="wp_item" id="wp_10">
+                    <div class="wp_hover_info">
+                        <div class="wp_variant_container">
+                            <div class="wp_variant_box wp_variant_1"></div>
+                            <div class="wp_variant_box wp_variant_2"></div>
+                            <div class="wp_variant_box wp_variant_3"></div>
+                            <div class="wp_variant_box wp_variant_4"></div>
+                            <div class="wp_variant_box wp_variant_5"></div>
+                            <div class="wp_variant_box wp_variant_6"></div>
+                            <div class="wp_variant_box wp_variant_7"></div>
+                            <div class="wp_variant_box wp_variant_8"></div>
+                            <div class="wp_variant_box wp_variant_9"></div>
+                        </div>
+                        <div class="wp_favorite_icon"></div>
+                        <div class="wp_info_description">
+                            <h5>Бренд</h5>
+                            <p>Status   </p>
+                            <h5>Формат</h5>
+                            <p>0,53 м × 10,05 м</p>
+                            <h5>Основа</h5>
+                            <p>Флизелиновая</p>
+                            <h5>Сочетания</h5>
+                            <p>090-58, 090-47,</p>
+                            <p>090-81</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">090-21</a>
+            </div>
+        </div>
+        <button id="load_more_items">Загрузить еще</button>
+
+
+        <!-- Carousel -->
+
+
+        <div id="carousel_last_viewed">
+            <h3>Последние <br/> просмотренные</h3>
+                        <div id="Carousel" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#Carousel" data-slide-to="1"></li>
+                                <li data-target="#Carousel" data-slide-to="2"></li>
+                                <li data-target="#Carousel" data-slide-to="3"></li>
+                            </ol>
+
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+
+                                <div class="item active">
+                                    <div class="c_last_viewed_items">
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_1">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_2">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_3">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_4">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_5">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="c_last_viewed_items">
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_2">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_5">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_3">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_4">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_1">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="item">
+                                    <div class="c_last_viewed_items">
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_4">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_5">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_3">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_1">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_3">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="c_last_viewed_items">
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_5">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_3">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_2">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_4">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                        <div class="wp_last_viewed_box">
+                                            <div class="thumbnail thumbnail_1">
+                                                <div class="wp_hover_info">
+                                                    <div class="wp_favorite_icon"></div>
+                                                    <div class="wp_info_description">
+                                                        <h5>Бренд</h5>
+                                                        <p>Versailles   </p>
+                                                        <h5>Формат</h5>
+                                                        <p>0,53 м × 10,05 м</p>
+                                                        <h5>Основа</h5>
+                                                        <p>Флизелиновая</p>
+                                                        <h5>Сочетания</h5>
+                                                        <p>090-58, 090-47,</p>
+                                                        <p>090-81</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#">090-21</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--.carousel-inner-->
+                            <a data-slide="prev" href="#Carousel" class="left carousel-control"></a>
+                            <a data-slide="next" href="#Carousel" class="right carousel-control"></a>
+                        </div>
+        </div>
+    </main>
+</div>
+
+
+<!-- Footer -->
+
+
+<footer>
+    <div id="c_align_content">
+        <section>
+            <div id="logo_footer"></div>
+            <p>«ЭДЕМ» — это мощное современное предприятие с образцовой культурой производства, выпускающие обои,<br/>
+                отвечающие высоким европейским стандартам.
+            </p>
+            <p>Производственно-управленческая база компании находится в Днепре и состоит из двух фабричных комплексов.</p>
+            <h4>Следите за нами в соцсетях</h4>
+            <div>
+                <a href="#">
+                    <div class="social_bnt">
+                        <div class="social_icon" id="social_vk"></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social_bnt">
+                        <div class="social_icon" id="social_facebook"></div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="social_bnt">
+                        <div class="social_icon" id="social_youtube"></div>
+                    </div>
+                </a>
+            </div>
+            <p id="copy_right">© Edem 2016</p>
+        </section>
+        <section>
+            <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Производство</a></li>
+                <li><a href="#">Этапы производства</a></li>
+                <li><a href="#">Сертификаты</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Экологическая информация</a></li>
+            </ul>
+            <p id="news_subscribe">Подписка на новости</p>
+            <form action="">
+                <div id="mail_icon_s"></div>
+                <input id="news_subscribe_inp" type="email" placeholder="Электронный адрес" maxlength="25"/>
+            </form>
+        </section>
+        <section>
+            <p><a href="#">Дилерам</a></p>
+            <p><a href="#">Гарантии</a></p>
+            <p><a href="#">Советы</a></p>
+        </section>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/burger_menu.js" type="text/javascript"></script>
+<script src="js/add_delete_filter.js" type="text/javascript"></script>
+</body>
+</html>
